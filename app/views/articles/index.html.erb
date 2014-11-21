@@ -1,0 +1,13 @@
+<h1>Articles#index</h1>
+
+Tags:
+<%= render Tag.all %>
+
+Articles
+<%= render @articles %>
+
+<%= form_for Article.new do |f| %>
+  <%= f.text_field :title %>
+  <%= text_field_tag :tag_list %>
+  <%= f.submit %>
+<% end %>
